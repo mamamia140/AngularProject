@@ -1,0 +1,30 @@
+footer {
+  width: calc(100vw - 22, 23px);
+  height: 150px;
+  background-color: blanchedalmond;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+footer .left {
+  width: 33%;
+}
+
+footer .middle {
+  padding-left: 10%;
+  width: 33%;
+}
+
+footer .right {
+  padding-left: 10%;
+  width: 33%;
+}
+footer ul {
+  list-style-type: none;
+}

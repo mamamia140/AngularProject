@@ -1,0 +1,59 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div class="add-movie-form">
+  <div class="form-group">
+    <label for="email" class="control-label">e-mail</label>
+    <input
+      type="email"
+      required
+      class="form-control"
+      name="email"
+      [(ngModel)]="email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password" class="control-label">password</label>
+    <input
+      type="password"
+      name="password"
+      required
+      class="form-control"
+      [(ngModel)]="password"
+    />
+  </div>
+  <div class="form-group">
+    <label for="Select">Type of the movie</label>
+    <select #teams (change)="onSelected(teams.value)" class="form-control">
+      <option default>Select</option>
+      <option>theatre-movies</option>
+      <option>popular-movies</option>
+      <option>trending-movies</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="name" class="control-label">Movie name</label>
+    <input
+      type="text"
+      required
+      class="form-control"
+      name="name"
+      [(ngModel)]="name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="cover" class="control-label">Movie cover</label>
+    <input
+      type="text"
+      name="cover"
+      required
+      class="form-control"
+      [(ngModel)]="cover"
+    />
+  </div>
+
+  <div class="btn-container">
+    <button class="btn btn-dark" (click)="validate()">Add</button>
+    <span *ngIf="Error != ''" class="error-message">{{ Error }}</span>
+  </div>
+</div>
+<app-footer></app-footer>

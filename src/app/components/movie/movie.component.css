@@ -1,0 +1,144 @@
+.movie-container {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.movie-container .top {
+  display: flex;
+}
+.movie-container .top .left {
+  width: 450px;
+}
+.movie-container .top .left .name {
+  font-size: 36px;
+  font-weight: bold;
+}
+.movie-container .top .left .rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.movie-container .top .left .rating .rating-value {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.movie-container .top .left .cover {
+  width: 400px;
+  height: 500px;
+  margin-right: 50px;
+}
+.movie-container .top .left .cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.movie-container .top .right {
+  width: 900px;
+  padding-top: 100px;
+}
+.movie-container .top .right .title {
+  margin-bottom: 30px;
+}
+.movie-container .top .right .rating-form .form-group {
+  margin-top: 20px;
+}
+.movie-container .top .right .rating-form .form-group .rating {
+  margin-top: -13px;
+}
+.movie-container .top .right .rating-form .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.movie-container .top .right .rating-form .form-group textarea {
+  resize: none;
+}
+.movie-container .top .right .rating-form .btn-container {
+  margin-top: 30px;
+}
+.movie-container .top .right .rating-form .btn-container .error-message {
+  float: right;
+  color: red;
+  font-size: 19px;
+}
+.movie-container .bottom {
+  margin-top: 50px;
+}
+.movie-container .bottom .title {
+  margin-bottom: 30px;
+}
+.movie-container .bottom .reviews {
+  width: 1000px;
+}
+.movie-container .bottom .reviews .review {
+  margin-bottom: 25px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+}
+.movie-container .bottom .reviews .review .review-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.movie-container .bottom .reviews .review .review-details .review-left .author {
+  font-size: 18px;
+  font-weight: bold;
+}
+.movie-container
+  .bottom
+  .reviews
+  .review
+  .review-details
+  .review-left
+  .author-dt {
+  opacity: 0.7;
+}
+.movie-container
+  .bottom
+  .reviews
+  .review
+  .review-details
+  .review-right
+  .rating {
+  display: flex;
+  align-items: center;
+}
+.movie-container
+  .bottom
+  .reviews
+  .review
+  .review-details
+  .review-right
+  .rating
+  .rating-value {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.movie-container .bottom .reviews .review .review-text {
+  font-style: italic;
+  font-size: 18px;
+}
+.movie-container .bottom .reviews .no-reviews {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  color: #d3d3d3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-right: 3px;
+  height: 30px;
+}
+.full {
+  color: red;
+}
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: red;
+}

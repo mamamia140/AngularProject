@@ -1,0 +1,21 @@
+.signup-form {
+  margin: auto;
+  width: 600px;
+  background-color: burlywood;
+  padding: 50px;
+  margin-top: 95px;
+  margin-bottom: 95px;
+  border-radius: 15px;
+}
+.signup-form .form-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.error-message {
+  float: right;
+  color: red;
+  font-size: 19px;
+}
+label {
+  font-size: 19px;
+}

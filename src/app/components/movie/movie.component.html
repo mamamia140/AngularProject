@@ -1,0 +1,101 @@
+<app-header> </app-header>
+<app-navbar> </app-navbar>
+<div class="movie-container">
+  <div class="top">
+    <div class="left">
+      <div class="name">{{ movie?.name }}</div>
+      <div class="rating">{{ movie?.rate }}</div>
+      <div class="cover">
+        <img [src]="movie?.cover" alt="" />
+      </div>
+    </div>
+    <div class="right">
+      <div class="rating-form">
+        <div class="form-group">
+          <label for="email" class="control-label">E-mail</label>
+          <input
+            type="email"
+            required
+            class="form-control"
+            name="email"
+            [(ngModel)]="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="control-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            required
+            class="form-control"
+            [(ngModel)]="password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name" class="control-label">Name</label>
+          <input
+            type="text"
+            name="name"
+            required
+            class="form-control"
+            [(ngModel)]="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="rate" class="control-label">Rate</label>
+          <ng-template #t let-fill="fill">
+            <span class="star" [class.full]="fill === 100">
+              <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+            </span>
+          </ng-template>
+
+          <ngb-rating
+            [(rate)]="rate"
+            [starTemplate]="t"
+            [readonly]="false"
+            [max]="5"
+            (rateChange)="onRateChange($event)"
+          ></ngb-rating>
+        </div>
+        <div class="form-group">
+          <label for="review">Review</label>
+          <textarea
+            name="review"
+            rows="3"
+            class="form-control"
+            [(ngModel)]="review"
+          ></textarea>
+        </div>
+        <div class="btn-container">
+          <button class="btn btn-dark" (click)="validate()">Submit</button>
+          <span *ngIf="Error != ''" class="error-message">{{ Error }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <h4 class="title">Reviews</h4>
+    <div class="reviews" *ngIf="movie?.reviews?.length > 0">
+      <div class="review" *ngFor="let review of movie?.reviews">
+        <div class="review-details">
+          <div class="review-left">
+            <div class="author">{{ review.name }}</div>
+            <div class="author_dt">{{ review.review }}</div>
+          </div>
+          <div class="review-right">
+            <div class="rating">
+              <app-star-rating
+                [rating]="review.rating"
+                [isReadOnly]="true"
+              ></app-star-rating>
+            </div>
+          </div>
+        </div>
+        <div class="review-text"></div>
+      </div>
+    </div>
+    <div class="reviews" *ngIf="movie?.reviews?.length === 0">
+      <div class="no-reviews">No Reviews Yet</div>
+    </div>
+  </div>
+</div>

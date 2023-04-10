@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #82bc64;
+}
+
+.loginContainer {
+  padding: 0px;
+  width: 400px;
+  height: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -175px 0 0 -200px;
+  background-color: white;
+  box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.54);
+}
+.loginContainer form {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding-top: 50px;
+}
+.loginContainer input {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 230px;
+}
+#username {
+  background-image: url("../../../assets/user.bmp");
+  position: left;
+  padding-left: 25px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+}
+#password {
+  background-image: url("../../../assets/key.svg");
+  position: left;
+  padding-left: 25px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+}
+
+footer {
+  margin: 15px 0px 15px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+footer a img {
+  width: 25px;
+}

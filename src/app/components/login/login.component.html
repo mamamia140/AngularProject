@@ -1,0 +1,35 @@
+<div class="loginContainer">
+  <form onsubmit="return false">
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="username"
+      [(ngModel)]="username"
+    />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="password"
+      [(ngModel)]="password"
+    />
+    <input
+      type="submit"
+      value="Log in"
+      (click)="login()"
+      style="background-color: #55b04e; border: 0px"
+    />
+  </form>
+  <footer>
+    <a href="https://www.linkedin.com/in/hakan-k%C4%B1l%C4%B1%C3%A7-1b15581b6/"
+      ><img src="../../../assets/linkedin.png" alt=""
+    /></a>
+    <a href="https://www.instagram.com/mhakankilic01/"
+      ><img src="../../../assets/instagram.png" alt=""
+    /></a>
+    <a href="https://github.com/mamamia140"
+      ><img src="../../../assets/github.png" alt=""
+    /></a>
+  </footer>
+</div>

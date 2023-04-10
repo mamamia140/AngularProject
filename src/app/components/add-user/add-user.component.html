@@ -1,0 +1,29 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div class="signup-form">
+  <div class="form-group">
+    <label for="email" class="control-label">e-mail</label>
+    <input
+      type="email"
+      required
+      class="form-control"
+      name="email"
+      [(ngModel)]="email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password" class="control-label">password</label>
+    <input
+      type="password"
+      name="password"
+      required
+      class="form-control"
+      [(ngModel)]="password"
+    />
+  </div>
+  <div class="btn-container">
+    <button class="btn btn-dark" (click)="validate()">Add</button>
+    <span *ngIf="Error != ''" class="error-message">{{ Error }}</span>
+  </div>
+</div>
+<app-footer></app-footer>
