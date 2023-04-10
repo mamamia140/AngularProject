@@ -6,5 +6,4 @@ movie information.
 
 
 link to the project:
-
 https://webdevapp-5bc56.web.app/home
